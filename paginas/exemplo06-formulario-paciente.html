@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Paciente</title>
+</head>
+
+<body>
+
+    <form>
+        <!-- 
+            ✔ Nome
+            ✔ Idade
+            ✔ Data Consulta
+            ✔ E-mail
+            ✔ Tipo Sanguíneo (A+, A- ,B+ ,B- ,AB ,AB+ ,O , O-)
+            ✔ Endereço ( ✔ Estado , ✔ Cidade , ✔ Bairro ,✔ CEP , ✔ Logradouro , ✔ Numero, ✔ Complemento)
+            ✔ Estado Civil
+            ✔ Alergias: Alimentos ,Amnbientes ,Medicamentos ,Picadas e Contatos
+            ✔ Observações
+            -->
+
+        <!--div= bloco de informações -->
+        <div>
+            <label for="campo-nome">Nome</label>
+            <input type="text" id="campo-nome" name="nome">
+        </div>
+        <div>
+            <label for="campo-idade">Idade</label>
+            <input type="number" id="campo-idade" name="idade">
+        </div>
+        <div>
+            <label for="campo-data-consulta">Data Consulta</label>
+            <input type="date" id="campo-data-consulta" name="data-consulta">
+        </div>
+        <div>
+            <label for="campo-email">E-mail</label>
+            <input type="email" id="campo-email" name="email">
+        </div>
+        <div>
+            <label for="campo-tipo-sanguineo">Tipo Sanguíneo</label>
+            <select id="campo-tipo-sanguineo" name="tipo-sanguineo">
+                <option disabled selected>Escolha uma opção</option>
+                <option value="A+">A Positivo</option>
+                <option value="A-">A Negativo</option>
+                <option value="B+">B Positivo</option>
+                <option value="B-">B Negativo</option>
+                <option value="AB+">AB Positivo</option>
+                <option value="AB-">AB Negativo</option>
+                <option value="O+">O Positivo</option>
+                <option value="O-">O Negativo</option>
+            </select>
+        </div>
+        <div>
+            <label for="campo-unidade-federativa">UF</label>
+            <select id="campo-unidade-federativa" name="unidade-federativa">
+                <option disabled selected>Escolha seu estado</option>
+                <option value="AC">Acre (AC)</option>
+                <option value="AL">Alagoas (AL)</option>
+                <option value="AP">Amapá (AP)</option>
+                <option value="AM">Amazonas (AM)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="MA">Maranhão (MA)</option>
+                <option value="MT">Mato Grosso (MT)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="PI">Piauí (PI)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="RO">Rondônia (RO)</option>
+                <option value="RR">Roraima (RR)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="TO">Tocantins (TO)</option>
+            </select>
+        </div>
+        <div>
+            <label for="campo-cidade">Cidade</label>
+            <input type="text" name="campo-cidade" id="cidade">
+        </div>
+        <div>
+            <label for="campo-bairro">Bairro</label>
+            <input type="text" name="campo-bairro" id="bairro">
+        </div>
+        <div>
+            <label for="campo-cep">CEP</label>
+            <input type="text" name="campo-cep" id="cep">
+            <!--não pode ser number por conta do 0 e - -->
+        </div>
+        <div>
+            <label for="campo-logradouro">Logradouro</label>
+            <input type="text" name="campo-logradouro" id="logradouro">
+        </div>
+        <div>
+            <label for="campo-numero">Numero
+                <input type="text" name="campo-numero" id="numero">
+        </div>
+        <div>
+            <label for="campo-complemento" style="display: block;">Complemento</label>
+            <textarea name="Complemento" id="campo-complemento"></textarea>
+            <!-- textearea= um campo onde o usuario pode digitar varias linhas-->
+        </div>
+        <div>
+            <span style="display: block;">Estado Cívil</span>
+
+            <input type="radio" value="solteiro(a)" id="campo-estado-civil-solteiro" name="estado-civil">
+            <label for="campo-estado-civil-solteiro">Solteiro(a)</label>
+
+            <input type="radio" value="casado(a)" id="campo-estado-civil-casado" name="estado-civil">
+            <label for="campo-estado-civil-casado">Casado(a)</label>
+
+            <input type="radio" value="divorciado(a)" id="campo-estado-civil-divorciado" name="estado-civil">
+            <label for="campo-estado-civil-divorciado">Divorciado(a)</label>
+        </div>
+        <div>
+            <span style="display: block;">Alergias</span>
+
+            <input type="checkbox" id="campo-alergia-alimentos" value="Alimentos" name="alergias">
+            <label for="campo-alergia-alimentos">Alimentos</label>
+
+            <input type="checkbox" id="campo-alergia-ambientais" value="Ambientes" name="ambientes">
+            <label for="campo-alergia-ambientais">Ambientes</label>
+
+            <input type="checkbox" id="campo-alergia-medicamentos" value="Medicamentos" name="medicamentos">
+            <label for="campo-alergia-medicamentos">Medicamentos</label>
+
+            <input type="checkbox" id="campo-alergia-picadas-e-contato" value="Picadas e Contato"
+                name="picadas e contato">
+            <label for="campo-alergia-picadas-e-contato">Picadas e Contato</label>
+        </div>
+        <div>
+            <label for="campo-observacoes" style="display: block;">Observações</label>
+            <textarea name="Observacoes" id="campo-observacoes"></textarea>
+        </div>
+
+        <button type="submit">Agendar</button>
+    </form>
+</body>
+
+</html>
